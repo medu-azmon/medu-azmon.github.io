@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>دریافت کارنامه</title>
+</head>
+<body>
+    <div class="login-card">
+        <div class="card-header">
+            <div class="log">کارنامه امتحان نهایی</div>
+        </div>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">کد کلی:</label>
+                <input required="" name="username" id="username" type="text">
+            </div>
+            <div class="form-group">
+                <label for="password">رمز عبور:</label>
+                <input required="" name="password" id="password" type="password">
+            </div>
+            <div class="form-group">
+                <input value="Login" type="submit">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // جلوگیری از ارسال فرم
+
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            if (username === '5' && password === '8') {
+                window.location.href = 'res.html'; // تغییر آدرس به res.html
+            } else {
+                window.location.href = 'block.html'; // تغییر آدرس به block.html
+            }
+        });
+    </script>
+</body>
+</html>
